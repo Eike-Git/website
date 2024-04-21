@@ -18,7 +18,7 @@ export default {
     };
   },
   mounted() {
-    axios.get('http://localhost:32804/api/filme')
+    axios.get('https://easy-weekly-werewolf.ngrok-free.app/api/filme')
       .then(response => {
         this.filme = response.data;
       })
