@@ -2,7 +2,7 @@
   <div>
     <h1>Daten von der lokalen JSON-API</h1>
     <ul v-if="dataFromApi">
-      <li v-for="item in dataFromApi" :key="item.field_film_id">{{ item.field_film_titel }}</li>
+      <li v-for="item in dataFromApi" :key="item.id">{{ item.name }}</li>
     </ul>
     <p v-else>Loading...</p>
   </div>
