@@ -1,17 +1,16 @@
 <template>
   <div id="app">
     <!-- Andere Teile deiner App -->
-    <Film-Liste></Film-Liste>
+    <data-component></data-component>
   </div>
 </template>
 
 <script>
-import FilmListe from './components/FilmListe.vue'
+import DataComponent from './components/DataComponent.vue'; // Stelle sicher, dass der Pfad korrekt ist
 
 export default {
-  name: 'App',
   components: {
-    'Film-Liste': FilmListe
+    'data-component': DataComponent
   }
 };
 </script>
