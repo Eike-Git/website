@@ -1,9 +1,9 @@
 // FilmListe.vue
 <template>
   <div>
-    <h1>Benutzerliste</h1>
+    <h1>Filmliste</h1>
     <ul>
-      <li v-for="user in users" :key="user.id">{{ user.name }}</li>
+      <li v-for="film in filme" :key="film.field_film_id">{{ film.field_film_titel }}</li>
     </ul>
   </div>
 </template>
@@ -14,13 +14,13 @@ import axios from 'axios';
 export default {
   data() {
     return {
-      users: []
+      filme: []
     };
   },
   mounted() {
-    axios.get('https://jsonplaceholder.typicode.com/users')
+    axios.get('http://127.0.0.1:32804')
       .then(response => {
-        this.users = response.data;
+        this.filme = response.data;
       })
       .catch(error => {
         console.error('Fehler beim Abrufen der Benutzerliste:', error);
