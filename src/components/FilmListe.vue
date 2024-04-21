@@ -18,7 +18,7 @@ export default {
     };
   },
   mounted() {
-    axios.get('http://127.0.0.1:32804')
+    axios.get('http://localhost:32804/api/filme')
       .then(response => {
         this.filme = response.data;
       })
