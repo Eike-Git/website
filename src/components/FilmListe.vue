@@ -1,19 +1,30 @@
-import axios from 'axios';
+// FilmListe.vue
+<template>
+  <div>
+    <h1>Benutzerliste</h1>
+    <ul>
+      <li v-for="user in users" :key="user.id">{{ user.name }}</li>
+    </ul>
+  </div>
+</template>
 
+<script>
+import axios from 'axios';
 
 export default {
   data() {
     return {
-      filme: []
+      users: []
     };
   },
   mounted() {
-    axios.get('http://127.0.0.1:32804/api/filme')
+    axios.get('https://jsonplaceholder.typicode.com/users')
       .then(response => {
-        this.filme = response.data;
+        this.users = response.data;
       })
       .catch(error => {
-        console.error('Fehler beim Abrufen der Filmliste:', error);
+        console.error('Fehler beim Abrufen der Benutzerliste:', error);
       });
   }
-}
+};
+</script>
