@@ -12,6 +12,7 @@
 
 <script>
 import axios from 'axios';
+axios.defaults.headers.common['ngrok-skip-browser-warning'] = `1`;
 
 export default {
   name: "FilmListe",
