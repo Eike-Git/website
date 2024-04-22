@@ -8,7 +8,7 @@ import FilmListe from "./components/DataComponent.vue";
 export default {
   name: "App",
   components: {
-    DataComponent
+    FilmListe
   }
 };
 </script>
