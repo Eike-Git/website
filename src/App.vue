@@ -1,27 +1,46 @@
 <template>
-  <div id="app">
-    <!-- Andere Teile deiner App -->
-    <data-component></data-component>
-  </div>
+  <Film-Liste />
 </template>
 
 <script>
-import DataComponent from './components/DataComponent.vue'; // Stelle sicher, dass der Pfad korrekt ist
+import FilmListe from "./components/DataComponent.vue";
 
 export default {
+  name: "App",
   components: {
-    'data-component': DataComponent
+    DataComponent
   }
 };
 </script>
 
 <style>
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  height: 100%;
+}
+h1 {
+  margin: 0;
+  padding: 0;
+  color: #f6b93b;
+}
+
+ul {
+  margin: 0;
+}
+
 #app {
+  height: 100%;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  font-size: 3rem;
+  padding: 0 2rem;
+  background: #38ada9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 </style>
