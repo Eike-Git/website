@@ -23,7 +23,7 @@ export default {
   },
   async created() {
     try {
-      const res = await axios.get('https://easy-weekly-werewolf.ngrok-free.app/api/filme')
+      const res = await axios.get('http://127.0.0.1:32804/api/filme')
       
       this.dataFromApi = res.data;
     }catch(e) {
