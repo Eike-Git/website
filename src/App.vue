@@ -1,5 +1,5 @@
 <template>
-  <Film-Liste />
+  <Film-Liste/>
 </template>
 
 <script lang="ts">
@@ -10,7 +10,7 @@ export default FilmListe({
   components: {
     FilmListe
   }
-};
+});
 </script>
 
 <style>
