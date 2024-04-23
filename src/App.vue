@@ -1,13 +1,15 @@
 <template>
   <Film-Liste />
+  <Film-Liste />
 </template>
 
-<script>
+<script lang="ts">
 import FilmListe from "./components/DataComponent.vue";
 
-export default {
-  name: "App",
+export default FilmListe({
+  name: 'App',
   components: {
+    FilmListe
     FilmListe
   }
 };
