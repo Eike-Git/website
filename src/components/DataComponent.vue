@@ -4,7 +4,7 @@
     <ul v-if="dataFromApi">
       <li v-for="item in dataFromApi" :key="item.field_film_id">
         {{ item.field_film_titel }}
-        {{ item.field_film_poster }}
+        {{ 'https://easy-weekly-werewolf.ngrok-free.app'item.field_film_poster }}
       </li>
     </ul>
     <p v-else>Loading...</p>
