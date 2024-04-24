@@ -23,14 +23,6 @@ axios.defaults.headers.common['ngrok-skip-browser-warning'] = `1`;
 
 export default {
   name: "FilmListe",
-  metaInfo: {
-    meta: [
-      {
-        httpEquiv: 'Content-Security-Policy',
-        content: "img-src 'self' https://easy-weekly-werewolf.ngrok-free.app/sites/default/files/2024-04/* http://192.168.178.16:8080/*"
-      }
-    ]
-  },
   data() {
     return {
       dataFromApi: []
