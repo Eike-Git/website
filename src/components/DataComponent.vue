@@ -10,7 +10,7 @@
         {{ item.field_film_hauptdarsteller_in_1 }}
         {{ item.field_film_hauptdarsteller_in_2 }}
         {{ item.field_film_regisseur_in }}
-        <img :src="require('https://easy-weekly-werewolf.ngrok-free.app'+item.field_film_poster)"/>
+        <img :src="require('http://easy-weekly-werewolf.ngrok-free.app'+item.field_film_poster)"/>
       </li>
     </ul>
     <p v-else>Loading...</p>
