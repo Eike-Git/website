@@ -10,7 +10,6 @@
         {{ item.field_film_hauptdarsteller_in_1 }}
         {{ item.field_film_hauptdarsteller_in_2 }}
         {{ item.field_film_regisseur_in }}
-        const url = 'https://easy-weekly-werewolf.ngrok-free.app';
         <img :src="url+item.field_film_poster" style="width:100%;" alt="alternative">
       </li>
     </ul>
@@ -21,6 +20,8 @@
 <script>
 import axios from 'axios';
 axios.defaults.headers.common['ngrok-skip-browser-warning'] = `1`;
+
+const url = 'https://easy-weekly-werewolf.ngrok-free.app';
 
 export default {
   name: "FilmListe",
