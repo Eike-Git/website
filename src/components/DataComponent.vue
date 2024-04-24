@@ -6,7 +6,7 @@
         {{ item.field_film_titel }}
         {{ item.field_film_beschreibung }}
         {{ item.field_film_erscheinungsdatum }}
-        <img :src="require('@/assets{{item.field_film_poster}}')">
+        <img :src="require('/src/assets'+{{item.field_film_poster}})">
         {{ item.field_film_genre }}
         {{ item.field_film_hauptdarsteller_in_1 }}
         {{ item.field_film_hauptdarsteller_in_2 }}
