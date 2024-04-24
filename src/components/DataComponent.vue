@@ -6,11 +6,11 @@
         {{ item.field_film_titel }}
         {{ item.field_film_beschreibung }}
         {{ item.field_film_erscheinungsdatum }}
-        <img :src="'/src/assets'+ item.field_film_poster">
         {{ item.field_film_genre }}
         {{ item.field_film_hauptdarsteller_in_1 }}
         {{ item.field_film_hauptdarsteller_in_2 }}
         {{ item.field_film_regisseur_in }}
+        <img :src="require('/src/assets'+item.field_film_poster)"/>
       </li>
     </ul>
     <p v-else>Loading...</p>
