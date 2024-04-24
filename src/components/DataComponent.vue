@@ -41,4 +41,4 @@ export default {
 
 </script>
 
-<meta http-equiv="Content-Security-Policy" content="img-src 'self' https://easy-weekly-werewolf.ngrok-free.app/sites/default/files/2024-04/*; http://192.168.178.16:8080/*;">
+<meta http-equiv="Content-Security-Policy" content="img-src 'self' https://easy-weekly-werewolf.ngrok-free.app/sites/default/files/2024-04/*;">
