@@ -18,8 +18,10 @@
 </template>
 
 <script>
+import axiosJsonp from 'axios-jsonp';
 import axios from 'axios';
 axios.defaults.headers.common['ngrok-skip-browser-warning'] = `1`;
+axios.defaults.adapter = axiosJsonp;
 
 export default {
   name: "FilmListe",
