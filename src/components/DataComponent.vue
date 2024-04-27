@@ -38,5 +38,3 @@ export default {
 };
 
 </script>
-
-<meta http-equiv="Content-Security-Policy" content="img-src 'self' https://easy-weekly-werewolf.ngrok-free.app/*;">
