@@ -4,7 +4,7 @@
     <ul v-if="dataFromApi">
       <li v-for="item in dataFromApi" :key="item.id">
         {{ item.name}}
-        {{ item.imageURL }}
+        img :src='{{ item.imageURL }}''
         {{ item.synopsis }}
         {{ item.year }}
         {{ item.genre }}        
