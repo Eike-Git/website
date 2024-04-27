@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import axiosJsonp from 'axios-jsonp';
+// import axiosJsonp from 'axios-jsonp';
 import axios from 'axios';
 // axios.defaults.adapter = axiosJsonp;
 
