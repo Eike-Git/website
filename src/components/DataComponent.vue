@@ -17,7 +17,7 @@
 <script>
 import axiosJsonp from 'axios-jsonp';
 import axios from 'axios';
-axios.defaults.adapter = axiosJsonp;
+// axios.defaults.adapter = axiosJsonp;
 
 export default {
   name: "FilmListe",
