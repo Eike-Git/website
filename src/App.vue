@@ -42,4 +42,9 @@ nav {
   padding: 30px;
 }
 
+.navbar > router-link img {
+  width: 30px;
+  height: 30px;
+}
+
 </style>
