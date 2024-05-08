@@ -1,11 +1,13 @@
 <template>
-  <div class="container">
-    <div class="row">
-      <div class="col">
-        <nav class="navbar">
-          <router-link to="/"><img src="src/assets/Gruppe 9.png" alt="homeIcon"></router-link> |
-          <router-link to="/about"><img src="src/assets/Gruppe 16.png" alt="filterIcon"></router-link>
-        </nav>
+  <div class="background">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <nav class="navbar">
+            <router-link to="/"><img src="assets/Gruppe 9.png"></router-link> |
+            <router-link to="/about"><img src="assets/Gruppe 16.png"></router-link>
+          </nav>
+        </div>
       </div>
     </div>
   </div>
@@ -14,6 +16,19 @@
 </template>
 
 <style>
+.background {
+  background-image: url(assets/Zeichenfläche3.png);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -26,12 +41,4 @@ nav {
   padding: 30px;
 }
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>
