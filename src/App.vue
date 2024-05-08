@@ -17,7 +17,7 @@
 
 <style>
 .background {
-  background-image: url(src/assets/Zeichenfläche3.png);
+  background-image: url('src/assets/backgroundHome.png');
   background-size: cover;
   background-position: center;
   position: relative;
