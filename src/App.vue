@@ -16,14 +16,14 @@
 </template>
 
 <style>
-.background {
+/* .background {
   background-image: url('src/assets/backgroundHome.png');
   background-size: cover;
   background-position: center;
   position: relative;
   z-index: 1;
   height: 100vh;
-}
+} */
 .container {
   display: flex;
   justify-content: center;
