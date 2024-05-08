@@ -4,8 +4,8 @@
       <div class="row">
         <div class="col">
           <nav class="navbar">
-            <router-link to="/"><img src="src/assets/IconHome.png"></router-link> |
-            <router-link to="/about"><img src="src/assets/IconFilter.png"></router-link>
+            <router-link to="/" tag="img" src="src/assets/IconHome.png"></router-link>
+            <router-link to="/" tag="img" src="src/assets/IconFilter.png"></router-link>
           </nav>
         </div>
       </div>
