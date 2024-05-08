@@ -1,8 +1,15 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <nav class="navbar">
+          <router-link to="/"><img src="src/assets/Gruppe 9.png" alt="homeIcon"></router-link> |
+          <router-link to="/about"><img src="src/assets/Gruppe 16.png" alt="filterIcon"></router-link>
+        </nav>
+      </div>
+    </div>
+  </div>
+  
   <router-view/>
 </template>
 
