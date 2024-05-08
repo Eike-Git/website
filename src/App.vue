@@ -22,12 +22,13 @@
   background-position: center;
   position: relative;
   z-index: 1;
+  height: 100vh;
 }
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 100%;
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
