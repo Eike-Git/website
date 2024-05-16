@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+  asl;kdasd;lkf
     <MoviesApi/>
   </div>
 </template>
