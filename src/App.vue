@@ -4,8 +4,8 @@
       <div class="row">
         <div class="col">
           <nav class="navbar">
-            <router-link to="/" tag="img" src="src/assets/IconHome.png"></router-link>
-            <router-link to="/" tag="img" src="src/assets/IconFilter.png"></router-link>
+            <router-link to="/" src="src/assets/IconHome.png"></router-link>
+            <router-link to="/" src="src/assets/IconFilter.png"></router-link>
           </nav>
         </div>
       </div>
@@ -22,6 +22,7 @@
   position: relative;
   z-index: 1;
   height: 100vh;
+  tag="img"
 } */
 .container {
   display: flex;
