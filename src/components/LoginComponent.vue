@@ -9,27 +9,31 @@
   </div>
 </template>
 
-<script>
-import { login } from '@/services/authService';
+<script lang="ts">
+import { defineComponent, ref } from 'vue';
+import { login } from '@/services/AuthService';
 
-export default {
-  data() {
-    return {
-      identifier: '',
-      password: '',
-    };
-  },
-  methods: {
-    async handleLogin() {
+export default defineComponent({
+  setup() {
+    const identifier = ref('');
+    const password = ref('');
+
+    const handleLogin = async () => {
       try {
-        const response = await login(this.identifier, this.password);
+        const response = await login(identifier.value, password.value);
         alert('Login successful!');
         console.log('JWT Token:', response.jwt); // Hier könntest du den JWT-Token speichern
       } catch (error) {
         console.error('Login failed:', error);
         alert('Login failed');
       }
-    },
+    };
+
+    return {
+      identifier,
+      password,
+      handleLogin,
+    };
   },
-};
+});
 </script>

@@ -10,28 +10,33 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import { defineComponent, ref } from 'vue';
 import { register } from '@/services/AuthService';
 
-export default {
-  data() {
-    return {
-      username: '',
-      email: '',
-      password: '',
-    };
-  },
-  methods: {
-    async handleRegister() {
+export default defineComponent({
+  setup() {
+    const username = ref('');
+    const email = ref('');
+    const password = ref('');
+
+    const handleRegister = async () => {
       try {
-        const response = await register(this.username, this.email, this.password);
+        const response = await register(username.value, email.value, password.value);
         alert('Registration successful!');
         console.log('JWT Token:', response.jwt); // Hier könntest du den JWT-Token speichern
       } catch (error) {
         console.error('Registration failed:', error);
         alert('Registration failed');
       }
-    },
+    };
+
+    return {
+      username,
+      email,
+      password,
+      handleRegister,
+    };
   },
-};
+});
 </script>
