@@ -20,7 +20,7 @@
 <script>
 import axios from 'axios';
 
-const API_URL = 'http://100.68.230.120:1337'; // Passe dies an deine Strapi-API-URL an
+const API_URL = 'http://100.68.230.120:1337';
 
 export default {
   data() {
