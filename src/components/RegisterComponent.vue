@@ -12,7 +12,7 @@
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
-import { register } from '@/services/AuthService';
+import { register } from '../services/AuthService';
 
 export default defineComponent({
   setup() {

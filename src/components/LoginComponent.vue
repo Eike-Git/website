@@ -11,7 +11,7 @@
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
-import { login } from '@/services/AuthService';
+import { login } from '../services/AuthService';
 
 export default defineComponent({
   setup() {
