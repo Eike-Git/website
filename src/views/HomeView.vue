@@ -1,6 +1,7 @@
 <template>
   <div class="home">
     <MoviesApi/>
+    test
   </div>
 </template>
 
