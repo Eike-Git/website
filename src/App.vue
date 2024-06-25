@@ -62,8 +62,13 @@ nav {
   height: 30px;
 }
 nav a {
-  font-weight: bold;
-  color: #2c3e50;
+  font-weight: 300;
+  color: #fff;
+  text-decoration: none;
+}
+nav a:hover {
+  font-weight: 700;
+  color: #fff;
 }
 
 nav a.router-link-exact-active {
