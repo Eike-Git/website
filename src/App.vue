@@ -2,10 +2,13 @@
   <div class="background">
     <nav>
       <div class="navContainer">
-        <div class="navItem"><router-link to="/"><img src="./assets/IconHome.png" alt=""></router-link> </div>
-        <div class="navItem"><router-link to="/suche"><img src="./assets/IconFilter.png" alt=""></router-link></div>
-        <div class="navItem"><router-link to="/konto"><img src="./assets/IconKonto.png" alt=""></router-link></div>
-        <div class="navItem"><router-link to="/warenkorb"><img src="./assets/IconWarenkorb.png" alt=""></router-link></div>
+        <div class="navItem"><router-link to="/"><a>home</a></router-link> </div>
+        <div class="navItem"><router-link to="/login"><a>login</a></router-link></div>
+        <div class="navItem"><router-link to="/register"><a>register</a></router-link></div>
+        <!-- <div class="navItem"><router-link to="/"><img src="./assets/IconHome.png" alt=""></router-link> </div>
+        <div class="navItem"><router-link to="/login"><img src="./assets/IconFilter.png" alt=""></router-link></div>
+        <div class="navItem"><router-link to="/register"><img src="./assets/IconKonto.png" alt=""></router-link></div> -->
+        <!-- <div class="navItem"><router-link to="/warenkorb"><img src="./assets/IconWarenkorb.png" alt=""></router-link></div> -->
       </div>
     </nav>
     <router-view/>
