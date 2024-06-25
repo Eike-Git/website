@@ -39,12 +39,12 @@
         height: auto;
         width: 100%;
         min-height: 400px;
-        min-width: 300px;
+        min-width: auto;
         background-size: cover;
         background-position: center;
         border-radius: 6px;
         box-shadow: 4px 4px 20px 2px #0b0b0b;
-        margin: 10vw 20px 0 0;
+        margin: 10vw 20px 10px 10px;
      }
     
      @media (max-width: 900px) {
