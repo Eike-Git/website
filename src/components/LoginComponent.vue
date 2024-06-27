@@ -77,11 +77,11 @@ input {
   background: transparent;
   font-size: 16px;
   font-family: 'Arial', sans-serif;
-  color: #333;
+  color: #fff;
 }
 
 input::placeholder {
-  color: #ccc;
+  color: #f2f2f2;
 }
 
 button {
