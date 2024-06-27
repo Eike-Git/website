@@ -39,7 +39,6 @@ export default defineComponent({
 </script>
 
 <style scoped>
-
 .loginContainer {
   display: flex;
   flex-direction: column;
@@ -67,26 +66,32 @@ form {
 input {
   padding: 10px;
   margin-bottom: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
+  border: none;
+  border-bottom: 1px solid white;
+  background: transparent;
   font-size: 16px;
   font-family: 'Arial', sans-serif;
+  color: #333;
+}
+
+input::placeholder {
+  color: #ccc;
 }
 
 button {
   padding: 10px;
   border: none;
-  border-radius: 5px;
+  border-radius: 0;
   background-color: #007BFF;
   color: white;
   font-size: 16px;
   cursor: pointer;
   font-family: 'Arial', sans-serif;
   transition: background-color 0.3s ease;
+  margin-top: 20px;
 }
 
 button:hover {
   background-color: #0056b3;
 }
 </style>
-
