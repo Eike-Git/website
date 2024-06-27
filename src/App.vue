@@ -37,6 +37,7 @@ h3 {
   background-image: url(./assets/backgroundHome.png);
   background-size: cover;
   height: 100%;
+  min-height: 100vh;
   width: auto;
 }
 
