@@ -86,9 +86,9 @@ input::placeholder {
 
 button {
   padding: 10px;
-  border: none;
-  border-radius: 0;
-  background-color: #007BFF;
+  border: 1px solid #fff;
+  border-radius: 6px;
+  background: transparent;
   color: white;
   font-size: 16px;
   cursor: pointer;
@@ -98,6 +98,7 @@ button {
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #fff;
+  color: #252525;
 }
 </style>
