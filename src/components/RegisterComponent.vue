@@ -48,7 +48,6 @@ export default defineComponent({
   display: flex;
   justify-content: center;
   height: 100vh;
-  background-color: #f5f5f5; /* Hintergrundfarbe für den gesamten Bereich */
 }
 
 .registerContainer {
@@ -57,15 +56,12 @@ export default defineComponent({
   align-items: center;
   padding: 20px;
   box-sizing: border-box;
-  background: rgba(255, 255, 255, 0.8); /* Halbtransparenter Hintergrund */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Leichter Schatten */
-  border-radius: 8px; /* Abgerundete Ecken */
 }
 
 h2 {
   margin-bottom: 20px;
   font-family: 'Arial', sans-serif;
-  color: #333; /* Dunkler Text */
+  color: #fff; 
 }
 
 form {
@@ -79,15 +75,15 @@ input {
   padding: 10px;
   margin-bottom: 10px;
   border: none;
-  border-bottom: 1px solid #ddd; /* Leichter grauer Rahmen unten */
+  border-bottom: 1px solid #fff; 
   background: transparent;
   font-size: 16px;
   font-family: 'Arial', sans-serif;
-  color: #333; /* Dunkler Text */
+  color: #fff; 
 }
 
 input::placeholder {
-  color: #ccc; /* Heller Platzhaltertext */
+  color: #ccc; 
 }
 
 button {
