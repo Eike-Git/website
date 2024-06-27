@@ -40,10 +40,53 @@ export default defineComponent({
 
 <style scoped>
 
-.loginConateiner {
-  height: 100%;
-  width: auto;
-  margin: 0;
+.loginContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: #f5f5f5;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
+h2 {
+  margin-bottom: 20px;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 300px;
+}
+
+input {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: 'Arial', sans-serif;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007BFF;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: 'Arial', sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
 </style>
+
