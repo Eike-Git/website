@@ -10,7 +10,7 @@
 
 <script>
 import axios from 'axios';
-import FilmTile from './FilmTile.vue';
+import FilmTile from '@/components/MovieVisuals.vue';
 
 export default {
   name: "DataComponent",
