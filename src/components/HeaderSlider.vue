@@ -37,7 +37,7 @@
      .sliderRow > .imgContainer {
         background-image: url("../assets/Oppenheimer.jpeg");
         height: auto;
-        width: 100%;
+        width: 90%;
         min-height: 400px;
         min-width: auto;
         background-size: cover;
