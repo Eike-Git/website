@@ -31,7 +31,7 @@
     margin: 16px;
     text-align: center;
     transition: transform 0.2s;
-    flex: 1 1 calc(33.333% - 32px); /* Drei Kacheln pro Reihe */
+    flex: 1 1 calc(33.333% - 32px); 
     box-sizing: border-box;
   }
   
@@ -57,13 +57,13 @@
   
   @media (max-width: 768px) {
     .film-tile {
-      flex: 1 1 calc(50% - 32px); /* Zwei Kacheln pro Reihe bei kleinen Bildschirmen */
+      flex: 1 1 calc(50% - 32px); 
     }
   }
   
   @media (max-width: 480px) {
     .film-tile {
-      flex: 1 1 100%; /* Eine Kachel pro Reihe bei sehr kleinen Bildschirmen */
+      flex: 1 1 100%; 
     }
   }
   </style>

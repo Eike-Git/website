@@ -34,7 +34,7 @@ h3 {
   margin: 10px 0 10px 0;
 }
 .background {
-  background-image: url(./assets/backgroundHome.png);
+  background-color: #2a2a2a;
   background-size: cover;
   height: 100vh;
 }
