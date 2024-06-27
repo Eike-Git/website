@@ -81,7 +81,7 @@ input {
 }
 
 input::placeholder {
-  color: #f2f2f2;
+  color: #ccc;
 }
 
 button {
