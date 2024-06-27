@@ -45,7 +45,6 @@ export default defineComponent({
   display: flex;
   justify-content: center;
   height: 100vh;
-
 }
 
 .loginContainer {
@@ -93,7 +92,7 @@ button {
   font-size: 16px;
   cursor: pointer;
   font-family: 'Arial', sans-serif;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
   margin-top: 20px;
 }
 

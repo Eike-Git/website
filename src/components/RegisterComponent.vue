@@ -1,12 +1,14 @@
 <template>
-  <div>
-    <h2>Register</h2>
-    <form @submit.prevent="handleRegister">
-      <input v-model="username" type="text" placeholder="Username" required />
-      <input v-model="email" type="email" placeholder="Email" required />
-      <input v-model="password" type="password" placeholder="Password" required />
-      <button type="submit">Register</button>
-    </form>
+  <div class="registerWrapper">
+    <div class="registerContainer">
+      <h2>Register</h2>
+      <form @submit.prevent="handleRegister">
+        <input v-model="username" type="text" placeholder="Username" required />
+        <input v-model="email" type="email" placeholder="Email" required />
+        <input v-model="password" type="password" placeholder="Password" required />
+        <button type="submit">Register</button>
+      </form>
+    </div>
   </div>
 </template>
 
@@ -90,10 +92,10 @@ input::placeholder {
 
 button {
   padding: 10px;
-  border: 1px solid #007BFF; /* Blauer Rand */
-  border-radius: 6px; /* Abgerundete Ecken */
+  border: 1px solid #fff; 
+  border-radius: 6px; 
   background: transparent;
-  color: #007BFF; /* Blauer Text */
+  color: #fff; 
   font-size: 16px;
   cursor: pointer;
   font-family: 'Arial', sans-serif;
@@ -102,7 +104,7 @@ button {
 }
 
 button:hover {
-  background-color: #007BFF; /* Blauer Hintergrund bei Hover */
-  color: white; /* Weißer Text bei Hover */
+  background-color: #fff; 
+  color: #252525; 
 }
 </style>
