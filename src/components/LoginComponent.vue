@@ -1,11 +1,13 @@
 <template>
-  <div class="loginConateiner">
-    <h2>Login</h2>
-    <form @submit.prevent="handleLogin">
-      <input v-model="identifier" type="text" placeholder="Email or Username" required />
-      <input v-model="password" type="password" placeholder="Password" required />
-      <button type="submit">Login</button>
-    </form>
+  <div class="loginWrapper">
+    <div class="loginContainer">
+      <h2>Login</h2>
+      <form @submit.prevent="handleLogin">
+        <input v-model="identifier" type="text" placeholder="Email or Username" required />
+        <input v-model="password" type="password" placeholder="Password" required />
+        <button type="submit">Login</button>
+      </form>
+    </div>
   </div>
 </template>
 
@@ -39,15 +41,23 @@ export default defineComponent({
 </script>
 
 <style scoped>
-.loginContainer {
+.loginWrapper {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
   background: #f5f5f5;
+}
+
+.loginContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 20px;
   box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
 }
 
 h2 {
