@@ -1,6 +1,5 @@
 <template>
   <div>
-    <h1>Daten von der lokalen JSON-API</h1>
     <div v-if="dataFromApi" class="film-grid">
       <FilmTile v-for="film in dataFromApi" :key="film.id" :film="film" />
     </div>

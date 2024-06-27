@@ -1,4 +1,3 @@
-<!-- src/components/FilmTile.vue -->
 <template>
     <div class="film-tile">
       <img :src="film.imageURL" alt="Film Image" class="film-image"/>
