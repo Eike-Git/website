@@ -1,20 +1,36 @@
 <template>
-  <HeaderSlider></HeaderSlider>
   <div class="home">
-    <MoviesApi/>
+    <HeaderSlider :film="filmInfo" />
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import MoviesApi from '@/components/DataComponent.vue'
-import HeaderSlider from '@/components/HeaderSlider.vue'; 
+import HeaderSlider from '@/components/HeaderSlider.vue';
+import axios from 'axios'; 
 
 export default {
   name: 'HomeView',
   components: {
-    MoviesApi,
-    HeaderSlider
-  }
-}
+    HeaderSlider,
+  },
+  data() {
+    return {
+      filmInfo: null,
+    };
+  },
+  async created() {
+    try {
+      const response = await axios.get('http://100.68.230.120:1337/movies/'); // Beispiel-URL anpassen
+      this.filmInfo = response.data;
+    } catch (error) {
+      console.error('Error fetching film info:', error);
+    }
+  },
+};
 </script>
+
+<style scoped>
+.home {
+  background-color: #f5f5f5; /* Hintergrundfarbe für den gesamten Bereich */
+}
+</style>

@@ -40,3 +40,69 @@ export default defineComponent({
   },
 });
 </script>
+
+<style scoped>
+.registerWrapper {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f5f5f5; /* Hintergrundfarbe für den gesamten Bereich */
+}
+
+.registerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.8); /* Halbtransparenter Hintergrund */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Leichter Schatten */
+  border-radius: 8px; /* Abgerundete Ecken */
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-family: 'Arial', sans-serif;
+  color: #333; /* Dunkler Text */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 300px;
+}
+
+input {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-bottom: 1px solid #ddd; /* Leichter grauer Rahmen unten */
+  background: transparent;
+  font-size: 16px;
+  font-family: 'Arial', sans-serif;
+  color: #333; /* Dunkler Text */
+}
+
+input::placeholder {
+  color: #ccc; /* Heller Platzhaltertext */
+}
+
+button {
+  padding: 10px;
+  border: 1px solid #007BFF; /* Blauer Rand */
+  border-radius: 6px; /* Abgerundete Ecken */
+  background: transparent;
+  color: #007BFF; /* Blauer Text */
+  font-size: 16px;
+  cursor: pointer;
+  font-family: 'Arial', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #007BFF; /* Blauer Hintergrund bei Hover */
+  color: white; /* Weißer Text bei Hover */
+}
+</style>
