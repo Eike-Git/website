@@ -43,7 +43,6 @@ export default defineComponent({
 <style scoped>
 .loginWrapper {
   display: flex;
-  align-items: center;
   justify-content: center;
   height: 100vh;
 
@@ -60,7 +59,7 @@ export default defineComponent({
 h2 {
   margin-bottom: 20px;
   font-family: 'Arial', sans-serif;
-  color: #333;
+  color: #fff;
 }
 
 form {
