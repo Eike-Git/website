@@ -46,7 +46,7 @@ export default defineComponent({
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background: #f5f5f5;
+
 }
 
 .loginContainer {
@@ -55,9 +55,6 @@ export default defineComponent({
   align-items: center;
   padding: 20px;
   box-sizing: border-box;
-  background: rgba(255, 255, 255, 0.8);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
 }
 
 h2 {
