@@ -1,8 +1,8 @@
 <template>
+  <HeaderSlider></HeaderSlider>
   <div class="home">
     <MoviesApi/>
   </div>
-  <HeaderSlider></HeaderSlider>
 </template>
 
 <script>
