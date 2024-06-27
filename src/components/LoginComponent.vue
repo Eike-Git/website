@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="loginConateiner">
     <h2>Login</h2>
     <form @submit.prevent="handleLogin">
       <input v-model="identifier" type="text" placeholder="Email or Username" required />
@@ -37,3 +37,13 @@ export default defineComponent({
   },
 });
 </script>
+
+<style scoped>
+
+.loginConateiner {
+  height: 100%;
+  width: auto;
+  margin: 0;
+}
+
+</style>

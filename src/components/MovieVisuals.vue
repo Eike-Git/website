@@ -10,7 +10,7 @@
   
   <script>
   export default {
-    name: "FilmTile",
+    name: "MovieVisuals",
     props: {
       film: {
         type: Object,

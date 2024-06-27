@@ -1,7 +1,7 @@
 <template>
   <div>
     <div v-if="dataFromApi" class="film-grid">
-      <FilmTile v-for="film in dataFromApi" :key="film.id" :film="film" />
+      <MovieVisuals v-for="film in dataFromApi" :key="film.id" :film="film" />
     </div>
     <p v-else>Loading...</p>
   </div>
@@ -10,11 +10,12 @@
 <script>
 import axios from 'axios';
 import FilmTile from '@/components/MovieVisuals.vue';
+import MovieVisuals from './MovieVisuals.vue';
 
 export default {
   name: "DataComponent",
   components: {
-    FilmTile
+    MovieVisuals
   },
   data() {
     return {
