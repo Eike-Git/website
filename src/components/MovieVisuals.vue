@@ -8,6 +8,7 @@
     <div v-if="showModal" class="modal" @click="closeModal">
       <div class="modal-content" @click.stop>
         <span class="close" @click="showModal = false">&times;</span>
+        <img :src="film.imageURL" alt="Film Image" class="modal-film-image"/>
         <h2>{{ film.name }}</h2>
         <p><strong>Genre:</strong> {{ film.genre }}</p>
         <p><strong>Year:</strong> {{ film.year }}</p>
@@ -70,15 +71,6 @@ export default {
   margin-bottom: 8px;
 }
 
-h2 {
-  margin: 8px 0;
-  font-size: 1.5em;
-}
-
-p {
-  margin: 4px 0;
-}
-
 .modal {
   display: flex;
   justify-content: center;
@@ -94,7 +86,7 @@ p {
 }
 
 .modal-content {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: #fff;
   padding: 20px;
   border-radius: 8px;
   text-align: center;
@@ -103,7 +95,7 @@ p {
   position: relative;
 }
 
-.close {
+.modal-content .close {
   position: absolute;
   top: 10px;
   right: 20px;
@@ -111,10 +103,38 @@ p {
   cursor: pointer;
 }
 
+.modal-film-image {
+  width: 50%; 
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+
 button {
   margin-top: 10px;
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
+}
+
+h2 {
+  margin: 8px 0;
+  font-size: 1.5em;
+}
+
+p {
+  margin: 4px 0;
+}
+
+@media (max-width: 768px) {
+  .film-tile {
+    flex: 1 1 calc(50% - 32px);
+  }
+}
+
+@media (max-width: 480px) {
+  .film-tile {
+    flex: 1 1 100%;
+  }
 }
 </style>
