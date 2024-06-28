@@ -1,13 +1,3 @@
-<template>
-  <div>
-    <DropdownFilter @genre-changed="applyGenreFilter" />
-    <div v-if="filteredData.length > 0" class="film-grid">
-      <MovieVisuals v-for="film in filteredData" :key="film.id" :film="film" />
-    </div>
-    <p v-else>Loading...</p>
-  </div>
-</template>
-
 <script>
 import axios from 'axios';
 import MovieVisuals from './MovieVisuals.vue';
@@ -22,41 +12,34 @@ export default {
   data() {
     return {
       dataFromApi: [],
-      filteredData: [],
-      selectedGenre: ""
+      filteredData: [], // Initialisierte leere Liste für die gefilterten Daten
+      selectedGenre: "" // Initial ausgewähltes Genre
     };
   },
   methods: {
     applyGenreFilter(genre) {
-      this.selectedGenre = genre;
-      this.filterData();
+      this.selectedGenre = genre; // Setzen des ausgewählten Genres
+      this.filterData(); // Filtermethode aufrufen
     },
     filterData() {
       if (this.selectedGenre === "") {
-        this.filteredData = this.dataFromApi;
+        this.filteredData = this.dataFromApi; // Wenn kein Genre ausgewählt ist, alle Daten anzeigen
       } else {
-        this.filteredData = this.dataFromApi.filter(film => film.genre === this.selectedGenre);
+        this.filteredData = this.dataFromApi.filter(film => film.genre === this.selectedGenre); // Filtern nach Genre
+      }
+    },
+    async fetchData() {
+      try {
+        const res = await axios.get('http://100.68.230.120:1337/movies');
+        this.dataFromApi = res.data;
+        this.filteredData = res.data; // Initial gefilterte Daten auf alle Daten setzen
+      } catch (e) {
+        console.error(e);
       }
     }
   },
-  async created() {
-    try {
-      const res = await axios.get('http://100.68.230.120:1337/movies');
-      this.dataFromApi = res.data;
-      this.filteredData = this.dataFromApi; // Initial set to all data
-    } catch (e) {
-      console.error(e);
-    }
+  created() {
+    this.fetchData(); // Beim Erstellen der Komponente Daten laden
   }
 };
 </script>
-
-<style scoped>
-.film-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 16px;
-  padding: 16px;
-}
-</style>
