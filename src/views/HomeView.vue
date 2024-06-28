@@ -1,7 +1,7 @@
 <template>
   <div class="home">
-    <MoviesApi/>
     <HeaderSlider/>
+    <MoviesApi/>
   </div>
 </template>
 

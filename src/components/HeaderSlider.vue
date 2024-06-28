@@ -26,7 +26,7 @@
   
       onMounted(async () => {
         try {
-          const response = await axios.get('http://100.68.230.120:1337/movies/1'); // Beispiel-API-Aufruf
+          const response = await axios.get('http://100.68.230.120:1337/movies/1'); 
           film.value = response.data;
         } catch (error) {
           console.error('Error fetching film:', error);
