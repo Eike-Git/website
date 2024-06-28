@@ -17,12 +17,15 @@ export default {
       selectedGenre: null,
       genres: [
         { value: '', label: 'Alle Genres' },
-        { value: 'action', label: 'Action' },
-        { value: 'comedy', label: 'Comedy' },
-        { value: 'drama', label: 'Drama' },
-        { value: 'horror', label: 'Horror' },
-        { value: 'science-fiction', label: 'Science Fiction' },
-        { value: 'thriller', label: 'Thriller' }
+        { value: 'Action', label: 'Action' },
+        { value: 'Comedy', label: 'Comedy' },
+        { value: 'Drama', label: 'Drama' },
+        { value: 'Horror', label: 'Horror' },
+        { value: 'Science Fiction', label: 'Science Fiction' },
+        { value: 'Mystery', label: 'Mystery' },
+        { value: 'Adventure', label: 'Adventure' },
+        { value: 'Crime', label: 'Crime' },
+        { value: 'Western', label: 'Western' }
       ]
     };
   },
