@@ -86,7 +86,7 @@ export default {
 }
 
 .modal-content {
-  background-color: #fff;
+  background-color: rgba(0, 0, 0, 0.6);
   padding: 20px;
   border-radius: 8px;
   text-align: center;
