@@ -30,7 +30,7 @@
     margin: 16px;
     text-align: center;
     transition: transform 0.2s;
-    flex: 1 1 calc(10% - 32px); 
+    flex: 1 1 calc(25% - 32px); 
     box-sizing: border-box;
   }
   
