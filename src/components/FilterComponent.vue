@@ -33,5 +33,4 @@ export default class FilterComponent extends Vue {
 </template>
 
 <style scoped>
-/* Add any custom styles for the filter component here */
 </style>

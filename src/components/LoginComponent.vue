@@ -13,23 +13,25 @@
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
+import { useRouter } from 'vue-router';
 import { login } from '@/services/AuthService';
 
 export default defineComponent({
   setup() {
     const identifier = ref('');
     const password = ref('');
+    const router = useRouter();
 
     const handleLogin = async () => {
       try {
         const response = await login(identifier.value, password.value);
         alert('Login successful!');
         console.log('JWT Token:', response.jwt);
-        localStorage.setItem('jwtToken', response.jwt); // Store the JWT in localStorage
-        this.$router.push('/home'); // Navigation zu /home
+        localStorage.setItem('jwtToken', response.jwt); // Speichere den JWT im LocalStorage
+        await router.push('/home'); // Navigation zu /home
       } catch (error) {
         console.error('Login failed:', error);
-        alert('Login failed');
+        alert('Login failed. Please try again.');
       }
     };
 
