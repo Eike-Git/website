@@ -39,7 +39,7 @@ export default {
 
 <style scoped>
 
-.genre-filter {
+#genre-filter {
  margin: 0 0 0 1rem;
  background: transparent;
  padding: 5px;
