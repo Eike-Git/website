@@ -1,5 +1,5 @@
 <template>
-    <div class="sliderContainer">
+    <div v-if="film" class="sliderContainer">
       <div class="sliderRow">
         <div class="sliderCol headerContent">
           <h1>{{ film.title }}</h1>
@@ -10,18 +10,32 @@
         </div>
       </div>
     </div>
+    <div v-else>
+      <p>Loading...</p>
+    </div>
   </template>
   
   <script>
-  export default {
+  import { defineComponent, ref, onMounted } from 'vue';
+  import axios from 'axios';
+  
+  export default defineComponent({
     name: 'HeaderSlider',
-    props: {
-      film: {
-        type: Object,
-        required: true,
-      },
+    setup() {
+      const film = ref(null);
+  
+      onMounted(async () => {
+        try {
+          const response = await axios.get('http://100.68.230.120:1337/movies/1'); // Beispiel-API-Aufruf
+          film.value = response.data;
+        } catch (error) {
+          console.error('Error fetching film:', error);
+        }
+      });
+  
+      return { film };
     },
-  };
+  });
   </script>
   
   <style scoped>
@@ -44,7 +58,6 @@
     height: auto;
     width: 90%;
     min-height: 400px;
-    min-width: auto;
     background-size: cover;
     background-position: center;
     border-radius: 6px;
