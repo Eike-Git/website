@@ -14,24 +14,6 @@
     <router-view/>
   </div>
 </template>
-
-<script>
-export default {
-  name: 'App',
-  mounted() {
-    window.addEventListener('beforeunload', this.handleBeforeUnload);
-  },
-  methods: {
-    handleBeforeUnload() {
-      localStorage.removeItem('jwtToken');
-    }
-  },
-  beforeDestroy() {
-    window.removeEventListener('beforeunload', this.handleBeforeUnload);
-  }
-};
-</script>
-
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
