@@ -72,7 +72,7 @@ input {
   padding: 10px;
   margin-bottom: 10px;
   border: none;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid #ddd;
   background: transparent;
   font-size: 16px;
   font-family: 'Arial', sans-serif;
