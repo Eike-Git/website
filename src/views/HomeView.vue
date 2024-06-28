@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <DropdownFilter/>
+    <!-- <DropdownFilter/> -->
     <MoviesApi/>
     <HeaderSlider/>
   </div>
@@ -16,7 +16,7 @@ export default {
   components: {
     MoviesApi,
     HeaderSlider,
-    DropdownFilter
+    // DropdownFilter
   }
 };
 </script>
