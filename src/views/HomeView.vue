@@ -1,15 +1,15 @@
 <template>
   <div class="home">
-    <DropdownFilter />
-    <MoviesApi />
-    <HeaderSlider />
+    <DropdownFilter/>
+    <MoviesApi/>
+    <HeaderSlider/>
   </div>
 </template>
 
 <script>
-import MoviesApi from '@/components/MovieVisuals.vue'; 
-import HeaderSlider from '@/components/HeaderSlider.vue'; 
-import DropdownFilter from '@/components/DropdownFilter.vue'; 
+import MoviesApi from '@/components/DataComponent.vue';
+import HeaderSlider from '@/components/HeaderSlider.vue';
+import DropdownFilter from '@/components/DropdownFilter.vue'
 
 export default {
   name: 'HomeView',
