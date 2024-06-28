@@ -3,9 +3,6 @@
     <div class="film-tile" @click="showModal = true">
       <img :src="film.imageURL" alt="Film Image" class="film-image"/>
       <h2>{{ film.name }}</h2>
-      <p>{{ film.synopsis }}</p>
-      <p><strong>Year:</strong> {{ film.year }}</p>
-      <p><strong>Genre:</strong> {{ film.genre }}</p>
     </div>
 
     <div v-if="showModal" class="modal" @click="closeModal">
