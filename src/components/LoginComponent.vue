@@ -24,7 +24,8 @@ export default defineComponent({
       try {
         const response = await login(identifier.value, password.value);
         alert('Login successful!');
-        console.log('JWT Token:', response.jwt); // Hier könntest du den JWT-Token speichern
+        console.log('JWT Token:', response.jwt);
+        localStorage.setItem('jwtToken', response.jwt); // Store the JWT in localStorage
       } catch (error) {
         console.error('Login failed:', error);
         alert('Login failed');
