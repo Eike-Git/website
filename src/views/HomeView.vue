@@ -1,19 +1,22 @@
 <template>
   <div class="home">
-    <MoviesApi/>
-    <HeaderSlider/>
+    <DropdownFilter />
+    <MoviesApi />
+    <HeaderSlider />
   </div>
 </template>
 
 <script>
-import MoviesApi from '@/components/DataComponent.vue';
-import HeaderSlider from '@/components/HeaderSlider.vue';
+import MoviesApi from '@/components/MoviesApi.vue'; 
+import HeaderSlider from '@/components/HeaderSlider.vue'; 
+import DropdownFilter from '@/components/DropdownFilter.vue'; 
 
 export default {
   name: 'HomeView',
   components: {
     MoviesApi,
-    HeaderSlider
+    HeaderSlider,
+    DropdownFilter
   }
 };
 </script>
