@@ -25,6 +25,7 @@ export default {
         { value: 'Mystery', label: 'Mystery' },
         { value: 'Adventure', label: 'Adventure' },
         { value: 'Crime', label: 'Crime' },
+        { value: 'Anime', label: 'Anime' },
         { value: 'Western', label: 'Western' }
       ]
     };
