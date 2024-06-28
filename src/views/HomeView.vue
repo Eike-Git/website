@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import MoviesApi from '@/components/MoviesApi.vue'; 
+import MoviesApi from '@/components/MovieVisuals.vue'; 
 import HeaderSlider from '@/components/HeaderSlider.vue'; 
 import DropdownFilter from '@/components/DropdownFilter.vue'; 
 
