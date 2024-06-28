@@ -54,7 +54,7 @@ export default {
   margin: 16px;
   text-align: center;
   transition: transform 0.2s;
-  flex: 1 1 calc(15% - 32px);
+  flex: 1 1 calc(10% - 32px);
   box-sizing: border-box;
   max-width: 400px;
   cursor: pointer;
@@ -128,13 +128,13 @@ p {
 
 @media (max-width: 768px) {
   .film-tile {
-    flex: 1 1 calc(25% - 32px);
+    flex: 1 1 calc(15% - 32px);
   }
 }
 
 @media (max-width: 480px) {
   .film-tile {
-    flex: 1 1 50%;
+    flex: 1 1 30%;
   }
 }
 </style>
