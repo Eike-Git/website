@@ -8,8 +8,8 @@
       <p><strong>Genre:</strong> {{ film.genre }}</p>
     </div>
 
-    <div v-if="showModal" class="modal">
-      <div class="modal-content">
+    <div v-if="showModal" class="modal" @click="closeModal">
+      <div class="modal-content" @click.stop>
         <span class="close" @click="showModal = false">&times;</span>
         <h2>{{ film.name }}</h2>
         <p><strong>Genre:</strong> {{ film.genre }}</p>
@@ -36,8 +36,10 @@ export default {
     };
   },
   methods: {
+    closeModal() {
+      this.showModal = false;
+    },
     goToDetailsPage() {
-      // Beispielhafte Navigation zu einer Detailseite
       this.$router.push({ name: 'FilmDetails', params: { id: this.film.id } });
     }
   }
