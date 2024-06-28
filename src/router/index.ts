@@ -31,7 +31,7 @@ const router = createRouter({
 
 router.beforeEach((to, from, next) => {
   if (to.matched.some(record => record.meta.requiresAuth)) {
-    const token = localStorage.getItem('jwtToken');
+    const token = sessionStorage.getItem('jwtToken');
     if (!token) {
       next({ name: 'login' }); // Redirect to login page if not authenticated
     } else {

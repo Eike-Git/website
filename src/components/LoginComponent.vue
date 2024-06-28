@@ -27,7 +27,7 @@ export default defineComponent({
         const response = await login(identifier.value, password.value);
         alert('Login successful!');
         console.log('JWT Token:', response.jwt);
-        localStorage.setItem('jwtToken', response.jwt); // Speichere den JWT im LocalStorage
+        sessionStorage.setItem('jwtToken', response.jwt); // Speichere den JWT im SessionStorage
         // router.push('/home');
       } catch (error) {
         console.error('Login failed:', error);
