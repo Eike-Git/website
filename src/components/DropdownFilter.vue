@@ -38,5 +38,11 @@ export default {
 </script>
 
 <style scoped>
-/* Stile für die Dropdown-Komponente */
+
+.genre-filter {
+ margin: 0 0 0 1rem;
+ background: transparent;
+ padding: 5px;
+ border-bottom: 1px solid #ccc;
+}
 </style>
