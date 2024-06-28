@@ -9,7 +9,7 @@
 <script>
 import MoviesApi from '@/components/DataComponent.vue';
 import HeaderSlider from '@/components/HeaderSlider.vue';
-import DropdownFilter from '@/components/DropdownFilter.vue'
+// import DropdownFilter from '@/components/DropdownFilter.vue'
 
 export default {
   name: 'HomeView',
