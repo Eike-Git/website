@@ -9,7 +9,6 @@
 
 <script>
 import axios from 'axios';
-import FilmTile from '@/components/MovieVisuals.vue';
 import MovieVisuals from './MovieVisuals.vue';
 
 export default {
