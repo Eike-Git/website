@@ -32,6 +32,7 @@
     transition: transform 0.2s;
     flex: 1 1 calc(25% - 32px); 
     box-sizing: border-box;
+    max-width: 450px;
   }
   
   .film-tile:hover {

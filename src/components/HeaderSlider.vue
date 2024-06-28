@@ -53,7 +53,6 @@
   }
   .headerContent {
     padding: 10vw 3vw 10px 3vw;
-    max-width: 400px;
   }
   .sliderRow > .imgContainer {
     height: auto;
