@@ -1,9 +1,9 @@
 <template>
   <div>
+    <h1>Daten von der lokalen JSON-API</h1>
     <FilterComponent
         :uniqueGenres="uniqueGenres"
         v-model:selectedGenre="selectedGenre" />
-    <!-- Film Grid Section -->
     <div v-if="filteredData.length > 0" class="film-grid">
       <MovieVisuals v-for="film in filteredData" :key="film.id" :film="film" />
     </div>
@@ -43,6 +43,7 @@ export default {
   async created() {
     try {
       const res = await axios.get('http://100.68.230.120:1337/movies');
+      console.log('API response:', res.data); 
       this.dataFromApi = res.data;
     } catch (e) {
       console.error(e);
@@ -50,14 +51,3 @@ export default {
   },
 };
 </script>
-</script>
-
-<style scoped>
-.film-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 16px;
-  padding: 16px;
-}
-</style>
