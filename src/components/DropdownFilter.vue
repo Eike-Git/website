@@ -6,7 +6,6 @@
         {{ genre.label }}
       </option>
     </select>
-    <p>Ausgewähltes Genre: {{ selectedGenre }}</p>
   </div>
 </template>
 
