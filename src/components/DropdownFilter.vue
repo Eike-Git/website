@@ -43,6 +43,7 @@ export default {
  margin: 0 0 0 1rem;
  background: transparent;
  padding: 5px;
+ border: none;
  border-bottom: 1px solid #ccc;
 }
 </style>
