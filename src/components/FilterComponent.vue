@@ -1,28 +1,3 @@
-<script lang="ts">
-import Vue from 'vue';
-import Options from 'vue-class-component';
-
-@Options({
-  props: {
-    uniqueGenres: {
-      type: Array,
-      required: true
-    },
-    selectedGenre: {
-      type: String,
-      required: true
-    }
-  },
-  emits: ['update:selectedGenre']
-})
-export default class FilterComponent extends Vue {
-  emitSelectedGenreChange(event: Event) {
-    const target = event.target as HTMLSelectElement;
-    this.$emit('update:selectedGenre', target.value);
-  }
-}
-</script>
-
 <template>
   <select :value="selectedGenre" @change="emitSelectedGenreChange">
     <option value="">Alle Genres</option>
@@ -31,6 +6,22 @@ export default class FilterComponent extends Vue {
     </option>
   </select>
 </template>
+
+<script lang="ts">
+import { Vue, Component, Prop, Emit } from 'vue-property-decorator';
+
+@Component
+export default class FilterComponent extends Vue {
+  @Prop({ type: Array, required: true }) uniqueGenres!: string[];
+  @Prop({ type: String, required: true }) selectedGenre!: string;
+
+  @Emit('update:selectedGenre')
+  emitSelectedGenreChange(event: Event) {
+    const target = event.target as HTMLSelectElement;
+    return target.value;
+  }
+}
+</script>
 
 <style scoped>
 /* Add any custom styles for the filter component here */
