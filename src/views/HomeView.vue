@@ -1,18 +1,18 @@
 <template>
   <div class="home">
     <HeaderSlider/>
-    <MoviesApi/>
+    <DataComponent/>
   </div>
 </template>
 
 <script>
-import MoviesApi from '@/components/DataComponent.vue';
+import DataComponent from '@/components/DataComponent.vue';
 import HeaderSlider from '@/components/HeaderSlider.vue';
 
 export default {
   name: 'HomeView',
   components: {
-    MoviesApi,
+    DataComponent,
     HeaderSlider
   }
 };
