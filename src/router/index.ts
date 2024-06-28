@@ -7,7 +7,8 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
     name: 'home',
-    component: HomeView
+    component: HomeView,
+    meta: { requiresAuth: true } // Protect this route
   },
   {
     // path: '/auth/local/register',
@@ -27,5 +28,18 @@ const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes
 })
+
+router.beforeEach((to, from, next) => {
+  if (to.matched.some(record => record.meta.requiresAuth)) {
+    const token = localStorage.getItem('jwtToken');
+    if (!token) {
+      next({ name: 'login' }); // Redirect to login page if not authenticated
+    } else {
+      next(); // Allow navigation if authenticated
+    }
+  } else {
+    next(); // Allow navigation if no authentication is required
+  }
+});
 
 export default router
