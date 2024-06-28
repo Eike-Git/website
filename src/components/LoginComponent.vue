@@ -26,6 +26,7 @@ export default defineComponent({
         alert('Login successful!');
         console.log('JWT Token:', response.jwt);
         localStorage.setItem('jwtToken', response.jwt); // Store the JWT in localStorage
+        this.$router.push('/home'); // Navigation zu /home
       } catch (error) {
         console.error('Login failed:', error);
         alert('Login failed');
