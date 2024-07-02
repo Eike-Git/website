@@ -110,8 +110,8 @@ export default {
 }
 
 .modal-film-video {
-  width: 50%;
-  height: auto;
+  width: 100%;
+  height: 400px;
   border-radius: 4px;
   margin-bottom: 16px;
 }
