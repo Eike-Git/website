@@ -39,9 +39,15 @@ export default {
     },
     goToDetailsPage() {
       this.$router.push({ name: 'FilmDetails', params: { id: this.film.id } });
+    },
+    getEmbedURL(url) {
+      const videoId = url.split('v=')[1] || url.split('/').pop();
+      return `https://www.youtube.com/embed/${videoId}`;
     }
   }
 };
+
+
 </script>
 
 <style scoped>
