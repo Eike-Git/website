@@ -109,8 +109,8 @@ export default {
   cursor: pointer;
 }
 
-.modal-film-image {
-  width: 50%; 
+.modal-film-video {
+  width: 50%;
   height: auto;
   border-radius: 4px;
   margin-bottom: 16px;
