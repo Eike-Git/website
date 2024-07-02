@@ -8,7 +8,7 @@
     <div v-if="showModal" class="modal" @click="closeModal">
       <div class="modal-content" @click.stop>
         <span class="close" @click="showModal = false">&times;</span>
-        <img :src="film.imageURL" alt="Film Image" class="modal-film-image"/>
+        <iframe v-if="film.trailerURL" :src="getEmbedURL(film.trailerURL)" frameborder="0" allowfullscreen class="modal-film-video"></iframe>
         <h2>{{ film.name }}</h2>
         <p><strong>Genre:</strong> {{ film.genre }}</p>
         <p><strong>Year:</strong> {{ film.year }}</p>
