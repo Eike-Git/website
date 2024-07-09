@@ -45,8 +45,7 @@ export default {
   height: 50px;
   margin: 2vw 0 0 0;
   padding: 4vw 0 2vw 0;
-  background-color: rgba(28, 28, 28, 0.6);
-  align-items: center;
+  border-top: 1px solid #e7e7e7;
 }
 
 #genre-filter {
