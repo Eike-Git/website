@@ -41,7 +41,7 @@ export default {
     startFilmRotation() {
       setInterval(() => {
         this.currentFilmIndex = (this.currentFilmIndex + 1) % this.films.length;
-      }, 10000); // Alle 10 Sekunden wechseln
+      }, 10000); 
     }
   },
   created() {
@@ -66,6 +66,7 @@ export default {
   display: flex;
   justify-content: flex-end;
   align-items: left;
+  
 }
 
 .film-image {

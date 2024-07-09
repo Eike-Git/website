@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="filterContainer">
     <label for="genre-filter">Filter nach Genre</label>
     <select id="genre-filter" v-model="selectedGenre" @change="updateSelectedGenre">
       <option v-for="(genre, index) in genres" :key="index" :value="genre.value">
@@ -39,6 +39,12 @@ export default {
 </script>
 
 <style scoped>
+
+.filterContainer {
+  width: 100%;
+  height: 50px;
+  padding: 5vw 0 5vw 0;
+}
 
 #genre-filter {
  margin: 0 0 0 1rem;
