@@ -43,7 +43,7 @@ export default {
     try {
       const res = await axios.get('http://100.68.230.120:1337/movies');
       this.dataFromApi = res.data;
-      this.filteredData = this.dataFromApi; // Initial set to all data
+      this.filteredData = this.dataFromApi; 
     } catch (e) {
       console.error(e);
     }

@@ -46,5 +46,10 @@ export default {
  padding: 5px;
  border: none;
  border-bottom: 1px solid #ccc;
+ color: #ccc;
+}
+
+select {
+  color: #ccc;
 }
 </style>
