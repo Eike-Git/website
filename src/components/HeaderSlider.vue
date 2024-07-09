@@ -17,7 +17,7 @@
 
 <script>
 export default {
-  name: 'ResponsiveHeader',
+  name: 'Header',
 };
 </script>
 
@@ -26,8 +26,7 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  padding: 1rem;
+  width: 100vw
 }
 
 .left-column {
