@@ -26,7 +26,7 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100vw
+  width: 100vw;
 }
 
 .left-column {
