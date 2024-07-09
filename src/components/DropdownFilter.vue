@@ -44,9 +44,8 @@ export default {
  margin: 0 0 0 1rem;
  background-color: rgba(28, 28, 28, 0.6);
  padding: 5px;
- border: none;
  border-radius: 8px;
- border-bottom: 1px solid #ccc; 
+ border: 1px solid #ccc; 
  color: #e7e7e7;
 }
 
