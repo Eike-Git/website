@@ -28,8 +28,6 @@ export default defineComponent({
         const response = await register(username.value, email.value, password.value);
         alert('Registration successful!');
         console.log('JWT Token:', response.jwt);
-        sessionStorage.setItem('jwtToken', response.jwt); // Speichere den JWT im SessionStorage
-        await router.push('/');
       } catch (error) {
         console.error('Registration failed:', error);
         alert('Registration failed');
