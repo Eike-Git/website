@@ -13,7 +13,7 @@
 import axios from 'axios';
 import MovieVisuals from './MovieVisuals.vue';
 import DropdownFilter from './DropdownFilter.vue';
-import HeaderComponent from './HeaderComponent.vue';
+import HeaderComponent from './HeaderSlider.vue';
 
 export default {
   name: "DataComponent",
