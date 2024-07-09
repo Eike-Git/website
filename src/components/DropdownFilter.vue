@@ -42,11 +42,11 @@ export default {
 
 #genre-filter {
  margin: 0 0 0 1rem;
- background: transparent;
+ background-color: #ccc;
  padding: 5px;
  border: none;
- border-bottom: 1px solid #ccc;
- color: #ccc;
+ /* border-bottom: 1px solid #ccc; */
+ color: #171717;
 }
 
 select {
