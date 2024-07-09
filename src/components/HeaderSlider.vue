@@ -4,13 +4,7 @@
       <h1>Logo</h1>
     </div>
     <div class="right-column">
-      <nav>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
+      <img :src="film.imageURL" alt="Film Image" class="film-image" />
     </div>
   </header>
 </template>
@@ -18,6 +12,12 @@
 <script>
 export default {
   name: 'Header',
+  props: {
+    film: {
+      type: Object,
+      required: true
+    }
+  },
 };
 </script>
 
@@ -27,6 +27,8 @@ export default {
   justify-content: space-between;
   align-items: center;
   width: 96vw;
+  padding: 1rem;
+  background-color: #f8f9fa;
 }
 
 .left-column {
@@ -34,22 +36,14 @@ export default {
 }
 
 .right-column {
-  flex: 1;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
 }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 1rem;
-  margin: 0;
-  padding: 0;
-}
-
-nav a {
-  text-decoration: none;
-  color: #333;
+.film-image {
+  width: 100px; 
+  height: auto;
 }
 
 @media (max-width: 768px) {
@@ -63,9 +57,8 @@ nav a {
     margin-top: 1rem;
   }
 
-  nav ul {
-    flex-direction: column;
-    gap: 0.5rem;
+  .film-image {
+    margin-top: 1rem;
   }
 }
 </style>

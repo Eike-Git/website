@@ -1,5 +1,6 @@
 <template>
   <div>
+    <HeaderComponent/>
     <DropdownFilter @genre-changed="applyGenreFilter" />
     <div v-if="filteredData.length > 0" class="film-grid">
       <MovieVisuals v-for="film in filteredData" :key="film.id" :film="film" />
@@ -12,12 +13,14 @@
 import axios from 'axios';
 import MovieVisuals from './MovieVisuals.vue';
 import DropdownFilter from './DropdownFilter.vue';
+import HeaderComponent from './HeaderComponent.vue';
 
 export default {
   name: "DataComponent",
   components: {
     MovieVisuals,
-    DropdownFilter
+    DropdownFilter,
+    HeaderComponent
   },
   data() {
     return {
