@@ -42,7 +42,7 @@ export default {
 
 #genre-filter {
  margin: 0 0 0 1rem;
- background-color: rgba(40, 40, 40, 0.4);
+ background-color: rgba(28, 28, 28, 0.6);
  padding: 5px;
  border: none;
  border-radius: 6px;
