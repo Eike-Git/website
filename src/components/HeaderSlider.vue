@@ -57,7 +57,6 @@ export default {
   align-items: center;
   width: 96vw;
   padding: 1rem;
-  background-color: #f8f9fa;
 }
 
 .left-column {
@@ -71,7 +70,7 @@ export default {
 }
 
 .film-image {
-  width: 100px;
+  width: 400px;
   height: auto;
 }
 
