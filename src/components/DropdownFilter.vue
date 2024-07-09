@@ -44,7 +44,7 @@ export default {
   width: 100%;
   height: 50px;
   margin: 2vw 0 0 0;
-  padding: 3vw 0 2vw 0;
+  padding: 4vw 0 2vw 0;
   background-color: rgba(28, 28, 28, 0.6);
   align-items: center;
 }
