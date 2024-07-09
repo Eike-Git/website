@@ -56,7 +56,6 @@ export default {
   justify-content: space-between;
   align-items: center;
   width: 96vw;
-  padding: 1rem;
 }
 
 .left-column {
@@ -66,7 +65,7 @@ export default {
 .right-column {
   display: flex;
   justify-content: flex-end;
-  align-items: center;
+  align-items: left;
 }
 
 .film-image {
