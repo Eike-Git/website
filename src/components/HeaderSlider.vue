@@ -1,23 +1,49 @@
 <template>
   <header class="flex-header">
     <div class="left-column">
-      <h1>Logo</h1>
+      <h1>{{ currentFilm.name }}</h1>
     </div>
     <div class="right-column">
-      <img :src="film.imageURL" alt="Film Image" class="film-image" />
+      <img v-if="currentFilm" :src="currentFilm.imageURL" alt="Film Image" class="film-image" />
     </div>
   </header>
 </template>
 
 <script>
+import axios from 'axios';
+
 export default {
-  name: 'Header',
-  props: {
-    film: {
-      type: Object,
-      required: true
+  name: 'HeaderSlider',
+  data() {
+    return {
+      films: [],
+      currentFilmIndex: 0
+    };
+  },
+  computed: {
+    currentFilm() {
+      return this.films[this.currentFilmIndex];
     }
   },
+  methods: {
+    async fetchFilms() {
+      try {
+        const res = await axios.get('http://100.68.230.120:1337/movies');
+        this.films = res.data;
+        this.startFilmRotation();
+      } catch (e) {
+        console.error(e);
+      }
+    },
+    startFilmRotation() {
+      setInterval(() => {
+        this.currentFilmIndex = (this.currentFilmIndex + 1) % this.films.length;
+      }, 10000); 
+    }
+  },
+  created() {
+    this.fetchFilms();
+  }
 };
 </script>
 
@@ -42,7 +68,7 @@ export default {
 }
 
 .film-image {
-  width: 100px; 
+  width: 100px;
   height: auto;
 }
 
