@@ -43,7 +43,8 @@ export default {
 .filterContainer {
   width: 100%;
   height: 50px;
-  padding: 5vw 0 2vw 0;
+  margin: 2vw 0 0 0;
+  padding: 2vw 0 2vw 0;
   background-color: rgba(28, 28, 28, 0.6);
 }
 
