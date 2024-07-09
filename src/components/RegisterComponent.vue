@@ -15,6 +15,7 @@
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
 import { register } from '@/services/AuthService';
+import router from "@/router";
 
 export default defineComponent({
   setup() {
@@ -26,7 +27,9 @@ export default defineComponent({
       try {
         const response = await register(username.value, email.value, password.value);
         alert('Registration successful!');
-        console.log('JWT Token:', response.jwt); // Hier könntest du den JWT-Token speichern
+        console.log('JWT Token:', response.jwt);
+        sessionStorage.setItem('jwtToken', response.jwt); // Speichere den JWT im SessionStorage
+        await router.push('/');
       } catch (error) {
         console.error('Registration failed:', error);
         alert('Registration failed');
