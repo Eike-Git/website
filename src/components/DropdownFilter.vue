@@ -45,11 +45,12 @@ export default {
  background-color: #ccc;
  padding: 5px;
  border: none;
+ border-radius: 6px;
  /* border-bottom: 1px solid #ccc; */
  color: #171717;
 }
 
 select {
-  color: #ccc;
+  color: #171717;
 }
 </style>
