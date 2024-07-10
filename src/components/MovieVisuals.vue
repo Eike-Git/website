@@ -38,11 +38,9 @@ export default {
       this.showModal = false;
     },
     RentFilm() {
-      this.$router.push({ name: 'rent', 
-      params: 
-        { 
-          name: this.film.name,
-        } 
+      this.$router.push({ 
+        name: 'rent', 
+        params: { name: this.film.name } 
       });
     },
     getEmbedURL(url) {

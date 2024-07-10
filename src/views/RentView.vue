@@ -7,12 +7,7 @@
   <script>
   export default {
     name: 'RentView',
-    props: ['name'],
-    data() {
-      return {
-        film: {}
-      };
-    }
+    props: ['name']
   };
   </script>
   

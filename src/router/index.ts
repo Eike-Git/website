@@ -40,12 +40,12 @@ router.beforeEach((to, from, next) => {
   if (to.matched.some(record => record.meta.requiresAuth)) {
     const token = sessionStorage.getItem('jwtToken');
     if (!token) {
-      next({ name: 'login' }); // Redirect to login page if not authenticated
+      next({ name: 'login' }); 
     } else {
-      next(); // Allow navigation if authenticated
+      next(); 
     }
   } else {
-    next(); // Allow navigation if no authentication is required
+    next(); 
   }
 });
 
