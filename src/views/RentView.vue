@@ -90,6 +90,7 @@
   margin-bottom: 16px;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .formLabel {
