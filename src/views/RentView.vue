@@ -18,15 +18,6 @@
         film: {}
       };
     },
-    async created() {
-      const filmId = this.$route.params.id;
-      try {
-        const res = await axios.get(`http://100.68.230.120:1337/movies/${filmId}`);
-        this.film = res.data;
-      } catch (e) {
-        console.error(e);
-      }
-    }
   };
   </script>
   

@@ -13,7 +13,7 @@
         <p><strong>Genre:</strong> {{ film.genre }}</p>
         <p><strong>Year:</strong> {{ film.year }}</p>
         <p>{{ film.synopsis }}</p>
-        <button @click="RentFilm">Ausleihen</button>
+        <button @click="rentFilm">Ausleihen</button>
       </div>
     </div>
   </div>
@@ -37,12 +37,12 @@ export default {
     closeModal() {
       this.showModal = false;
     },
-    RentFilm() {
-      this.$router.push({ name: 'rent', 
-      params: 
-        { 
+    rentFilm() {
+      this.$router.push({ 
+        name: 'RentView', 
+        params: { 
           id: this.film.id,
-          name: this.film.name,
+          name: this.film.name 
         } 
       });
     },
@@ -52,6 +52,8 @@ export default {
     }
   }
 };
+</script>
+
 
 
 </script>
