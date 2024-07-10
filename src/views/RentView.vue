@@ -80,7 +80,7 @@
   
   <style scoped>
   .form-container {
-    margin: 20px 2vw 20px 2vw;
+    margin: 20px 17vw 20px 17vw;
     padding: 60px 2vw 60px 2vw;
     background-color: rgba(0, 0, 0, 0.4);
     border-radius: 8px;
@@ -96,7 +96,7 @@
   }
   
   .formControl {
-    width: 50%;
+    width: 80%;
     padding: 8px;
     font-size: 14px;
     border: 1px solid #ccc;
