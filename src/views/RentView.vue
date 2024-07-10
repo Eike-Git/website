@@ -7,7 +7,10 @@
   <script>
   export default {
     name: 'RentView',
-    props: ['name']
+    props: ['name'],
+    mounted() {
+        console.log('Prop "name" received:', this.name);
+    }
   };
   </script>
   
