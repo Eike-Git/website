@@ -13,7 +13,7 @@
         <p><strong>Genre:</strong> {{ film.genre }}</p>
         <p><strong>Year:</strong> {{ film.year }}</p>
         <p>{{ film.synopsis }}</p>
-        <button @click="goToDetailsPage">Details anzeigen</button>
+        <button @click="RentFilm">Ausleihen</button>
       </div>
     </div>
   </div>
@@ -37,8 +37,8 @@ export default {
     closeModal() {
       this.showModal = false;
     },
-    goToDetailsPage() {
-      this.$router.push({ name: 'FilmDetails', params: { id: this.film.id } });
+    RentFilm() {
+      this.$router.push({ name: 'rent', params: { id: this.film.id } });
     },
     getEmbedURL(url) {
       const videoId = url.split('v=')[1] || url.split('/').pop();
