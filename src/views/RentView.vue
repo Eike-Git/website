@@ -81,8 +81,8 @@
   <style scoped>
   .form-container {
     margin-top: 20px;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.1);
+    padding: 60px 2vw 60px 2vw;
+    background-color: rgba(0, 0, 0, 0.3);
     border-radius: 8px;
   }
   
@@ -92,15 +92,16 @@
   
   .formLabel {
     font-size: 16px;
-    color: #333;
+    color: #ccc;
   }
   
   .formControl {
-    width: 100%;
+    width: 50%;
     padding: 8px;
     font-size: 14px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    background: transparent;
   }
   
   .btn-primary {
