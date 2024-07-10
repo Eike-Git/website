@@ -41,7 +41,6 @@ export default {
       this.$router.push({ name: 'rent', 
       params: 
         { 
-          id: this.film.id,
           name: this.film.name,
         } 
       });
