@@ -27,6 +27,7 @@ const routes: Array<RouteRecordRaw> = [
     path: '/rent',
     name: 'rent',
     component: RentView,
+    props: true
   }
 ]
 
