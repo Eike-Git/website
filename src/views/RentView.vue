@@ -97,6 +97,7 @@
   font-size: 16px;
   color: #ccc;
   margin-bottom: 4px;
+  align-items: left;
 }
   
   .formControl {
