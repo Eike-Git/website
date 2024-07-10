@@ -86,14 +86,17 @@
     border-radius: 8px;
   }
   
-  .form {
-    margin-bottom: 16px;
-  }
-  
-  .formLabel {
-    font-size: 16px;
-    color: #ccc;
-  }
+.form {
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.formLabel {
+  font-size: 16px;
+  color: #ccc;
+  margin-bottom: 4px;
+}
   
   .formControl {
     width: 80%;
