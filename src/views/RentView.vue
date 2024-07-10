@@ -80,9 +80,9 @@
   
   <style scoped>
   .form-container {
-    margin-top: 20px;
+    margin: 20px 2vw 20px 2vw;
     padding: 60px 2vw 60px 2vw;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.4);
     border-radius: 8px;
   }
   
