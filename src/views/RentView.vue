@@ -38,6 +38,8 @@
         </form>
       </div>
     </div>
+    <div class="placeholder">
+    </div>
   </template>
   
   <script>
@@ -123,6 +125,11 @@
   }
   input[type="date"] {
   color: #ccc; 
+}
+
+.placeholder {
+    width: auto;
+    height: 100px;
 }
   </style>
   
