@@ -82,6 +82,7 @@
   .form-container {
     margin: 20px 17vw 20px 17vw;
     padding: 60px 2vw 60px 2vw;
+    max-width: 600px;
     background-color: rgba(0, 0, 0, 0.4);
     border-radius: 8px;
   }
@@ -97,7 +98,6 @@
   font-size: 16px;
   color: #ccc;
   margin-bottom: 4px;
-  align-items: left;
 }
   
   .formControl {
@@ -121,5 +121,8 @@
   .btn-primary:hover {
     background-color: #0056b3;
   }
+  input[type="date"] {
+  color: #ccc; 
+}
   </style>
   
