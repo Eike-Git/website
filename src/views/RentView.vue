@@ -1,6 +1,7 @@
 <template>
     <div>
-      <h1>Film ausleihen: {{ name }}</h1>
+      <h2>{{ name }}</h2>
+      
     </div>
   </template>
   
