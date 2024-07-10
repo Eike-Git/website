@@ -24,7 +24,7 @@ const routes: Array<RouteRecordRaw> = [
     component: LoginView
   },
   {
-    path: '/rent:name/:id',
+    path: '/rent /:name/:id',
     name: 'rent',
     component: RentView,
     props: true
