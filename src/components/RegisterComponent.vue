@@ -15,7 +15,6 @@
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
 import { register } from '@/services/AuthService';
-import router from "@/router";
 
 export default defineComponent({
   setup() {
