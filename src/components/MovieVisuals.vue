@@ -40,7 +40,11 @@ export default {
     RentFilm() {
       this.$router.push({ 
         name: 'rent', 
-        params: { name: this.film.name } 
+        params: 
+          { 
+            name: this.film.name, 
+            id: this.film.id
+          } 
       });
     },
     getEmbedURL(url) {
