@@ -59,8 +59,9 @@ export default defineComponent({
     const street = ref('');
     const city = ref('');
     const plz = ref('');
-    const rentalFrom = ref('');
-    const rentalTo = ref('');
+    const rentalFrom = ref(new Date());
+    const rentalTo = ref(new Date());
+    const defaultDate = new Date();
 
     const submitForm = async () => {
       console.log('Form submitted');
@@ -81,6 +82,12 @@ export default defineComponent({
         await saveRentalData(rentalData);
         resetForm();
 
+        console.log('first Name:', firstName.value);
+        console.log('last Name:', lastName.value);
+        console.log('Street:', street.value);
+        console.log('City:', city.value);
+        console.log('PLZ:', plz.value);
+        console.log('Rental from Datum:', rentalFrom.value);
         console.log('Rental to Datum:', rentalTo.value);
 
         const rentalEndDate = rentalTo.value!;
@@ -103,8 +110,8 @@ export default defineComponent({
       street.value = '';
       city.value = '';
       plz.value = '';
-      rentalFrom.value = null;
-      rentalTo.value = null;
+      rentalFrom.value = new Date(defaultDate);
+      rentalTo.value = new Date(defaultDate);
     };
 
     return {
