@@ -118,3 +118,57 @@ export default defineComponent({
   }
 });
 </script>
+
+<style scoped>
+.form-container {
+  margin: 20px 17vw 20px 17vw;
+  padding: 60px 2vw 60px 2vw;
+  max-width: 600px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
+}
+
+.form {
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.formLabel {
+  font-size: 16px;
+  color: #ccc;
+  margin-bottom: 4px;
+}
+
+.formControl {
+  width: 80%;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: transparent;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+input[type="date"] {
+  color: #ccc;
+}
+
+.placeholder {
+  width: auto;
+  height: 100px;
+}
+</style>
