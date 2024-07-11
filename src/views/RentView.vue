@@ -81,6 +81,8 @@ export default defineComponent({
         await saveRentalData(rentalData);
         resetForm();
 
+        console.log('Rental to Datum:', rentalTo.value);
+
         const rentalEndDate = rentalTo.value!;
         const now = new Date();
         const timeUntilRentalEnd = rentalEndDate.getTime() - now.getTime();
