@@ -39,7 +39,7 @@
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
-import { setMoviesAsRented, saveRentalData, resetMovieStatus, deleteRentalData } from '@/services/RentalService';
+import { setMoviesAsRented, saveRentalData } from '@/services/RentalService';
 
 interface RentalData {
   firstName: string;
@@ -49,6 +49,7 @@ interface RentalData {
   plz: string;
   rentalFrom: Date;
   rentalTo: Date;
+  movieId: string;
 }
 
 export default defineComponent({
@@ -62,6 +63,7 @@ export default defineComponent({
     const rentalFrom = ref(new Date());
     const rentalTo = ref(new Date());
     const defaultDate = new Date();
+    const movieId = ref('');
 
     const submitForm = async () => {
       console.log('Form submitted');
@@ -72,7 +74,8 @@ export default defineComponent({
         city: city.value,
         plz: plz.value,
         rentalFrom: rentalFrom.value!,
-        rentalTo: rentalTo.value!
+        rentalTo: rentalTo.value!,
+        movieId: movieId.value!
       };
 
       try {
@@ -90,15 +93,6 @@ export default defineComponent({
         console.log('Rental from Datum:', rentalFrom.value);
         console.log('Rental to Datum:', rentalTo.value);
 
-        const rentalEndDate = rentalTo.value!;
-        const now = new Date();
-        const timeUntilRentalEnd = rentalEndDate.getTime() - now.getTime();
-
-        setTimeout(async () => {
-          console.log('Timeout reached, resetting movie status and deleting rental data');
-          await resetMovieStatus();
-          await deleteRentalData(rentalData.rentalTo);
-        }, timeUntilRentalEnd);
       } catch (error) {
         console.error('An error occurred:', error);
       }
@@ -122,6 +116,7 @@ export default defineComponent({
       plz,
       rentalFrom,
       rentalTo,
+      movieId,
       submitForm
     };
   }
