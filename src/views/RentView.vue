@@ -38,98 +38,75 @@
       </form>
     </div>
   </div>
-  <div class="placeholder">
-  </div>
+  <div class="placeholder"></div>
 </template>
 
 <script>
-import axios from 'axios';
+import { defineComponent, ref } from 'vue';
+import { setMoviesAsRented, saveRentalData, resetMovieStatus, deleteRentalData } from '@/services/RentalService';
 
-export default {
-  name: 'RentView',
+export default defineComponent({
   props: ['name', 'id'],
-  data() {
-    return {
-      firstName: '',
-      lastName: '',
-      street: '',
-      city: '',
-      plz: '',
-      rentalFrom: '',
-      rentalTo: ''
-    };
-  },
-  methods: {
-    submitForm() {
+  setup() {
+    const firstName = ref('');
+    const lastName = ref('');
+    const street = ref('');
+    const city = ref('');
+    const plz = ref('');
+    const rentalFrom = ref('');
+    const rentalTo = ref('');
+
+    const submitForm = async () => {
       const rentalData = {
-        firstName: this.firstName,
-        lastName: this.lastName,
-        street: this.street,
-        city: this.city,
-        plz: this.plz,
-        rentalFrom: this.rentalFrom,
-        rentalTo: this.rentalTo
+        firstName: firstName.value,
+        lastName: lastName.value,
+        street: street.value,
+        city: city.value,
+        plz: plz.value,
+        rentalFrom: rentalFrom.value,
+        rentalTo: rentalTo.value
       };
 
-      axios.get('http://100.68.230.120:1337/movies')
-          .then(response => {
-            const movies = response.data;
-            movies.forEach(movie => {
-              if (!movie.geliehen) {
-                axios.put(`http://100.68.230.120:1337/movies/${movie.id}`, { geliehen: true });
-              }
-            });
-          });
+      try {
+        await setMoviesAsRented();
+        await saveRentalData(rentalData);
+        resetForm();
 
-      axios.post('http://100.68.230.120:1337/verleih', rentalData)
-          .then(response => {
-            console.log('Verleih data saved:', response.data);
-            this.resetForm();
-          });
+        const rentalEndDate = new Date(rentalTo.value);
+        const now = new Date();
+        const timeUntilRentalEnd = rentalEndDate - now;
 
-      const rentalEndDate = new Date(this.rentalTo);
-      const now = new Date();
-      const timeUntilRentalEnd = rentalEndDate - now;
+        setTimeout(async () => {
+          await resetMovieStatus();
+          await deleteRentalData(rentalData.rentalTo);
+        }, timeUntilRentalEnd);
+      } catch (error) {
+        console.error('An error occurred:', error);
+      }
+    };
 
-      setTimeout(() => {
-        this.resetRentalStatus();
-      }, timeUntilRentalEnd);
-    },
-    resetForm() {
-      this.firstName = '';
-      this.lastName = '';
-      this.street = '';
-      this.city = '';
-      this.plz = '';
-      this.rentalFrom = '';
-      this.rentalTo = '';
-    },
-    resetRentalStatus() {
-      axios.get('http://100.68.230.120:1337/movies')
-          .then(response => {
-            const movies = response.data;
-            movies.forEach(movie => {
-              if (movie.geliehen) {
-                axios.put(`http://100.68.230.120:1337/movies/${movie.id}`, { geliehen: false });
-              }
-            });
-          });
+    const resetForm = () => {
+      firstName.value = '';
+      lastName.value = '';
+      street.value = '';
+      city.value = '';
+      plz.value = '';
+      rentalFrom.value = '';
+      rentalTo.value = '';
+    };
 
-      axios.get('http://100.68.230.120:1337/verleih')
-          .then(response => {
-            const verleihData = response.data;
-            const currentDate = new Date().toISOString().split('T')[0]; // Aktuelles Datum im ISO-Format
-            verleihData.forEach(entry => {
-              const entryRentalTo = new Date(entry.rentalTo).toISOString().split('T')[0];
-              if (entryRentalTo === currentDate) {
-                axios.delete(`http://100.68.230.120:1337/verleih/${entry.id}`);
-              }
-            });
-          });
-    }
+    return {
+      firstName,
+      lastName,
+      street,
+      city,
+      plz,
+      rentalFrom,
+      rentalTo,
+      submitForm
+    };
   }
-
-};
+});
 </script>
 
 <style scoped>
