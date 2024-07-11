@@ -38,7 +38,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue';
+import { defineComponent, ref, onMounted } from 'vue';
 import { setMoviesAsRented, saveRentalData } from '@/services/RentalService';
 
 interface RentalData {
@@ -51,6 +51,16 @@ interface RentalData {
   rentalTo: Date;
   movieId: string;
 }
+
+const extractIdFromUrl = (url: string): string | null => {
+  const parts = url.split('/');
+  const id = parts[parts.length - 1];
+  if (!isNaN(Number(id))) {
+    return id;
+  } else {
+    return null;
+  }
+};
 
 export default defineComponent({
   props: ['name', 'id'],
@@ -65,6 +75,10 @@ export default defineComponent({
     const defaultDate = new Date();
     const movieId = ref('');
 
+    onMounted(() => {
+      movieId.value = extractIdFromUrl(window.location.href) || '';
+    });
+
     const submitForm = async () => {
       console.log('Form submitted');
       const rentalData: RentalData = {
@@ -75,7 +89,7 @@ export default defineComponent({
         plz: plz.value,
         rentalFrom: rentalFrom.value!,
         rentalTo: rentalTo.value!,
-        movieId: movieId.value!
+        movieId: movieId.value
       };
 
       try {
@@ -122,6 +136,7 @@ export default defineComponent({
   }
 });
 </script>
+
 
 <style scoped>
 .form-container {
