@@ -28,7 +28,7 @@ export const setMoviesAsRented = async () => {
 
 export const saveRentalData = async (rentalData: RentalData) => {
     try {
-        const response = await axios.post(`${API_URL}/verleih`, rentalData);
+        const response = await axios.post(`${API_URL}/verleihs`, rentalData);
         return response.data;
     } catch (error) {
         console.error('Failed to save rental data:', error);

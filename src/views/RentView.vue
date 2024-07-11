@@ -59,8 +59,8 @@ export default defineComponent({
     const street = ref('');
     const city = ref('');
     const plz = ref('');
-    const rentalFrom = ref<Date | null>(null); // Initialisierung mit null oder einem Standardwert
-    const rentalTo = ref<Date | null>(null);   // Initialisierung mit null oder einem Standardwert
+    const rentalFrom = ref<Date | null>(null);
+    const rentalTo = ref<Date | null>(null);
 
     const submitForm = async () => {
       console.log('Form submitted');
