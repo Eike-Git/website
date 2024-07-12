@@ -145,9 +145,9 @@ export default defineComponent({
 
 <style scoped>
 .form-container {
-  margin: 20px 17vw 20px 17vw;
+  margin: 0 auto;
   padding: 60px 2vw 60px 2vw;
-  max-width: 600px;
+  max-width: 400px;
   background-color: rgba(0, 0, 0, 0.4);
   border-radius: 8px;
 }
