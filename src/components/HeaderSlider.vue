@@ -41,7 +41,7 @@ export default {
     startFilmRotation() {
       setInterval(() => {
         this.currentFilmIndex = (this.currentFilmIndex + 1) % this.films.length;
-      }, 1000); 
+      }, 7000); 
     }
   },
   created() {
@@ -73,6 +73,7 @@ export default {
 .film-image {
   width: 400px;
   height: auto;
+  border-radius: 4px;
 }
 
 @media (max-width: 768px) {
