@@ -34,6 +34,7 @@
         <button type="submit" class="btn btn-primary">Formular absenden</button>
       </form>
     </div>
+    <div class="placeholder"></div>
   </div>
 </template>
 
