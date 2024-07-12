@@ -52,15 +52,6 @@ interface RentalData {
   movieId: string;
 }
 
-const extractIdFromUrl = (url: string): string | null => {
-  const parts = url.split('/');
-  const id = parts[parts.length - 1];
-  if (!isNaN(Number(id))) {
-    return id;
-  } else {
-    return null;
-  }
-};
 
 export default defineComponent({
   props: ['name', 'id'],
@@ -75,9 +66,22 @@ export default defineComponent({
     const defaultDate = new Date();
     const movieId = ref('');
 
+
+    const extractIdFromUrl = (url: string): string | null => {
+      const parts = url.split('/');
+      const id = parts[parts.length - 1];
+      if (!isNaN(Number(id))) {
+        return id;
+      } else {
+        return null;
+      }
+    };
+
     onMounted(() => {
       movieId.value = extractIdFromUrl(window.location.href) || '';
     });
+
+
 
     const submitForm = async () => {
       console.log('Form submitted');
