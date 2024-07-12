@@ -41,7 +41,7 @@ export default {
     startFilmRotation() {
       setInterval(() => {
         this.currentFilmIndex = (this.currentFilmIndex + 1) % this.films.length;
-      }, 10000); 
+      }, 1000); 
     }
   },
   created() {
