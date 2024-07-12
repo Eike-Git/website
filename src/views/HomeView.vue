@@ -3,6 +3,7 @@
     <HeaderSlider/>
     <MoviesApi/>
   </div>
+  <div class="placeholder"></div>
 </template>
 
 <script>
@@ -24,5 +25,9 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.placeholder {
+  width: auto;
+  height: 200px;
 }
 </style>
