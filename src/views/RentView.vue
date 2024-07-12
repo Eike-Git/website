@@ -193,6 +193,6 @@ input[type="date"] {
 
 .placeholder {
   width: auto;
-  height: 100px;
+  height: 200px;
 }
 </style>
